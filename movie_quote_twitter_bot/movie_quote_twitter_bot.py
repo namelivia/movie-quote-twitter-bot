@@ -16,7 +16,7 @@ class MovieQuoteTwitterBot:
             quote.end
         )
         text = self.generate_text_clip(quote.content, quote.start, quote.end)
-        create_gif(config.GENERAL_CONFIG['outputURI'], video, text)
+        self.create_gif(config.GENERAL_CONFIG['outputURI'], video, text)
 
         api = twitter.Api(
             consumer_key=config.GENERAL_CONFIG['consumerKey'],
