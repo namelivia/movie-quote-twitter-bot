@@ -6,7 +6,7 @@ setup(
     author_email='jignacio.amelivia@gmail.com',
     url='https://namelivia.com',
     description='This is a small python bot for posting movie quotes',
-    license='LICENSE.md',
+    license='LICENSE',
     long_description=open('README.md').read(),
     packages=['movie_quote_twitter_bot'],
     include_package_data=True,
