@@ -1,4 +1,4 @@
-# Movie Quote Twitter Bot
+# Movie Quote Twitter Bot [![Build Status](https://travis-ci.org/namelivia/movie-quote-twitter-bot.svg?branch=master)](https://travis-ci.org/namelivia/movie-quote-twitter-bot)
 
 This is a Python script I made one day after work, it will pick random quotes from a provided movie and post them to Twitter as animated GIFs.
 
