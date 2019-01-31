@@ -4,17 +4,16 @@ This is a Python script I made one day after work, it will pick random quotes fr
 
 ## Requeriments
 
-python3
-pip3
+* python3
+* pip3
 
 ## Installation
 
-Clone the project
-Execute `pip3 install -e . --user` for installing it's dependencies.
+Clone the project, navigate to its root folder and execute `pip3 install -e . --user` for installing it's dependencies.
 
 ## Configuration
 
-Copy `movie-quote-twitter-bot/config.example.py` to `movie-quote-twitter-bot/config.example.py` 
+Copy `movie-quote-twitter-bot/config.example.py` to `movie-quote-twitter-bot/config.py` 
 
 Then open the file with a text editor and replace the default values with your actual values.
 
@@ -28,4 +27,4 @@ Then open the file with a text editor and replace the default values with your a
 
 ## Usage
 
-Just execute run.py and if everything is properly configured, a random movie quote will be posted to your Twitter account.
+Just execute `./run.py` and if everything is properly configured, a random movie quote will be posted to your Twitter account.
