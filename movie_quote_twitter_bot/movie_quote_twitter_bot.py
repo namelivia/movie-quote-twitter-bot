@@ -24,32 +24,31 @@ class MovieQuoteTwitterBot:
             access_token_key=config.GENERAL_CONFIG['accessTokenKey'],
             access_token_secret=config.GENERAL_CONFIG['accessTokenSecret'],
         )
-        self.post_gif_to_twitter(api, quote.content, config.GENERAL_CONFIG['outputURI'])
-
+        self.post_gif_to_twitter(
+            api, quote.content, config.GENERAL_CONFIG['outputURI'])
 
     def get_subs(self, subs_file_uri):
-        subs_file = open(config.GENERAL_CONFIG['subsURI'], encoding='utf-8-sig')
+        subs_file = open(
+            config.GENERAL_CONFIG['subsURI'],
+            encoding='utf-8-sig')
         return list(srt.parse(subs_file.read()))
-
 
     def post_gif_to_twitter(self, api, sentence, gif_path):
         api.PostUpdate(sentence, media=gif_path, media_category='tweet_gif')
-
 
     def generate_video_clip(self, video_uri, start, end):
         return (VideoFileClip(video_uri)
                 .subclip(str(start), str(end))
                 .resize(0.3))
 
-
     def generate_text_clip(self, sentence, start, end):
         return TextClip(sentence, fontsize=24, color='yellow',
                         font='Amiri-bold').set_pos('bottom').set_duration(str(end - start))
 
-
     def create_gif(self, output_uri, video, text):
         compo = CompositeVideoClip([video, text])
         compo.write_gif(output_uri)
+
 
 if __name__ == '__main__':
     MovieQuoteTwitterBot().main()
