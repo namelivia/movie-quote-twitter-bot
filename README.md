@@ -19,7 +19,7 @@ Then open the file with a text editor and replace the default values with your a
 
 * `subsURI`: Path of the .srt subs file. e.g. `/home/user/movies/movie.srt`
 * `videoURI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
-* `outputPath`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
+* `outputURI`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
 * `consumerKey`: Your Twitter account consumer key.
 * `consumerSecret`: Your Twitter account consumer secret.
 * `accessTokenKey`: Your Twitter account access token key.
