@@ -1,4 +1,4 @@
-python-twitter-movie-quote-bot/config.py
+movie-quote-twitter-bot/config.py
 *.egg-info
 __pycache__/
 

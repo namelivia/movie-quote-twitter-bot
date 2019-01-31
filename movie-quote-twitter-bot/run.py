@@ -4,22 +4,25 @@ import random
 import twitter
 import config
 from moviepy.editor import *
-subs = get_subs(config.GENERAL_CONFIG['subsURI'])
-quote = random.choice(subs)
-video = generate_video_clip(
-    config.GENERAL_CONFIG['videoURI'],
-    quote.start,
-    quote.end)
-text = generate_text_clip(quote.content, quote.start, quote.end)
-create_gif(config.GENERAL_CONFIG['outputURI'], video, text)
 
-api = twitter.Api(
-    consumer_key=config.GENERAL_CONFIG['consumerKey'],
-    consumer_secret=config.GENERAL_CONFIG['consumerSecret'],
-    access_token_key=config.GENERAL_CONFIG['accessTokenKey'],
-    access_token_secret=config.GENERAL_CONFIG['accessTokenSecret'],
-)
-post_gif_to_twitter(api, quote.content, config.GENERAL_CONFIG['outputURI'])
+
+def main():
+    quote = random.choice(get_subs(config.GENERAL_CONFIG['subsURI']))
+    video = generate_video_clip(
+        config.GENERAL_CONFIG['videoURI'],
+        quote.start,
+        quote.end
+    )
+    text = generate_text_clip(quote.content, quote.start, quote.end)
+    create_gif(config.GENERAL_CONFIG['outputURI'], video, text)
+
+    api = twitter.Api(
+        consumer_key=config.GENERAL_CONFIG['consumerKey'],
+        consumer_secret=config.GENERAL_CONFIG['consumerSecret'],
+        access_token_key=config.GENERAL_CONFIG['accessTokenKey'],
+        access_token_secret=config.GENERAL_CONFIG['accessTokenSecret'],
+    )
+    post_gif_to_twitter(api, quote.content, config.GENERAL_CONFIG['outputURI'])
 
 
 def get_subs(subs_file_uri):
@@ -45,3 +48,6 @@ def generate_text_clip(sentence, start, end):
 def create_gif(output_uri, video, text):
     compo = CompositeVideoClip([video, text])
     compo.write_gif(output_uri)
+
+
+main()
