@@ -32,3 +32,6 @@ Just execute `movie_quote_twitter_bot/movie_quote_twitter_bot.py` and if everyth
 ## Testing
 
 For executing the tests just execute `python3 -m unittest discover` on the project's root folder.
+
+## Contributing
+Any suggestion, bug reports, or any other kind enhacements are welcome. Just [open an issue first](https://github.com/namelivia/movie-quote-twitter-bot/issues/new) for creating a PR remember this project has linting checkings so any PR should comply with them before beign merged, this checks will be automatically applied when opening or modifying the PR's.
