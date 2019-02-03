@@ -18,6 +18,7 @@ Copy `movie_quote_twitter_bot/config.example.py` to `movie_quote_twitter_bot/con
 Then open the file with a text editor and replace the default values with your actual values.
 
 * `subsURI`: Path of the .srt subs file. e.g. `/home/user/movies/movie.srt`
+* `subsEncoding`: Encoding of the subs file. e.g. `utf-8-sig`, `latin-1`, etc... 
 * `videoURI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
 * `outputURI`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
 * `consumerKey`: Your Twitter account consumer key.

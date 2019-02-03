@@ -30,7 +30,7 @@ class MovieQuoteTwitterBot:
     def get_subs(self, subs_file_uri):
         subs_file = open(
             config.GENERAL_CONFIG['subsURI'],
-            encoding='utf-8-sig')
+            encoding=config.GENERAL_CONFIG['subsEncoding'])
         return list(srt.parse(subs_file.read()))
 
     def post_gif_to_twitter(self, api, sentence, gif_path):
@@ -43,7 +43,7 @@ class MovieQuoteTwitterBot:
 
     def generate_text_clip(self, sentence, start, end):
         return TextClip(sentence, fontsize=24, color='yellow',
-                        font='Amiri-bold').set_pos('bottom').set_duration(str(end - start))
+                        font='FreeSans-Negrita').set_pos('bottom').set_duration(str(end - start))
 
     def create_gif(self, output_uri, video, text):
         compo = CompositeVideoClip([video, text])

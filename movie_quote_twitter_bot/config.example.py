@@ -1,5 +1,6 @@
 GENERAL_CONFIG = {
     'subsURI': 'your-subtitles-file',
+    'subsEncoding': 'your-subtitles-file-encoding',
     'videoURI': 'your-video-file',
     'outputURI': 'output-path-for-the-GIF',
     'consumerKey': 'your-twitter-account-consumer-key',
