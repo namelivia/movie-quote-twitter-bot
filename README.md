@@ -21,6 +21,7 @@ Then open the file with a text editor and replace the default values with your a
 * `subsEncoding`: Encoding of the subs file. e.g. `utf-8-sig`, `latin-1`, etc... 
 * `videoURI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
 * `outputURI`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
+* `textColor`: Color for the text that will be displayed e.g. `yellow`, `white`, etc...
 * `consumerKey`: Your Twitter account consumer key.
 * `consumerSecret`: Your Twitter account consumer secret.
 * `accessTokenKey`: Your Twitter account access token key.
