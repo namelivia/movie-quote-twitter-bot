@@ -42,8 +42,8 @@ class MovieQuoteTwitterBot:
                 .resize(0.3))
 
     def generate_text_clip(self, sentence, start, end):
-        return TextClip(sentence, fontsize=24, color=config.GENERAL_CONFIG['textColor'],
-                        font='FreeSans-Negrita').set_pos('bottom').set_duration(str(end - start))
+        return TextClip(sentence, fontsize=config.GENERAL_CONFIG['textSize'], color=config.GENERAL_CONFIG['textColor'],
+                        font=config.GENERAL_CONFIG['textFont']).set_pos('bottom').set_duration(str(end - start))
 
     def create_gif(self, output_uri, video, text):
         compo = CompositeVideoClip([video, text])
