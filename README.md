@@ -13,7 +13,7 @@ This is a Python script I made one day after work, it will pick random quotes fr
 
 ## Installation
 
-Clone the project, navigate to its root folder and execute `pip3 install - e . --user` for installing it's dependencies.
+Clone the project, navigate to its root folder and execute `pip3 install -e . --user` for installing it's dependencies.
 
 ## Configuration
 
