@@ -2,31 +2,32 @@
 import srt
 import random
 import twitter
-import config
+import os
+import time
 from moviepy.editor import *
 
 
 class MovieQuoteTwitterBot:
     def main(self):
-        quote = random.choice(self.get_subs(config.GENERAL_CONFIG["subsURI"]))
+        quote = random.choice(self.get_subs(os.environ["SUBS_URI"]))
         video = self.generate_video_clip(
-            config.GENERAL_CONFIG["videoURI"], quote.start, quote.end
+            os.environ["VIDEO_URI"], quote.start, quote.end
         )
         text = self.generate_text_clip(quote.content, quote.start, quote.end)
-        self.create_gif(config.GENERAL_CONFIG["outputURI"], video, text)
+        self.create_gif(os.environ["OUTPUT_URI"], video, text)
 
         api = twitter.Api(
-            consumer_key=config.GENERAL_CONFIG["consumerKey"],
-            consumer_secret=config.GENERAL_CONFIG["consumerSecret"],
-            access_token_key=config.GENERAL_CONFIG["accessTokenKey"],
-            access_token_secret=config.GENERAL_CONFIG["accessTokenSecret"],
+            consumer_key=os.environ["CONSUMER_KEY"],
+            consumer_secret=os.environ["CONSUMER_SECRET"],
+            access_token_key=os.environ["ACCESS_TOKEN_KEY"],
+            access_token_secret=os.environ["ACCESS_TOKEN_SECRET"]
         )
-        self.post_gif_to_twitter(api, quote.content, config.GENERAL_CONFIG["outputURI"])
+        self.post_gif_to_twitter(api, quote.content, os.environ["OUTPUT_URI"])
 
     def get_subs(self, subs_file_uri):
         subs_file = open(
-            config.GENERAL_CONFIG["subsURI"],
-            encoding=config.GENERAL_CONFIG["subsEncoding"],
+            os.environ["SUBS_URI"],
+            encoding=os.environ["SUBS_ENCODING"],
         )
         return list(srt.parse(subs_file.read()))
 
@@ -40,9 +41,9 @@ class MovieQuoteTwitterBot:
         return (
             TextClip(
                 sentence,
-                fontsize=config.GENERAL_CONFIG["textSize"],
-                color=config.GENERAL_CONFIG["textColor"],
-                font=config.GENERAL_CONFIG["textFont"],
+                fontsize=int(os.environ["TEXT_SIZE"]),
+                color=os.environ["TEXT_COLOR"],
+                font=os.environ["TEXT_FONT"],
             )
             .set_pos("bottom")
             .set_duration(str(end - start))
@@ -54,4 +55,6 @@ class MovieQuoteTwitterBot:
 
 
 if __name__ == "__main__":
-    MovieQuoteTwitterBot().main()
+    while True:
+        MovieQuoteTwitterBot().main()
+    time.sleep(int(os.environ["IDLE_PERIOD"]))

@@ -17,21 +17,20 @@ Clone the project, navigate to its root folder and execute `pip3 install -e . --
 
 ## Configuration
 
-Copy `movie_quote_twitter_bot/config.example.py` to `movie_quote_twitter_bot/config.py`
+To execute the script the following environment variables must be set.
 
-Then open the file with a text editor and replace the default values with your actual values.
-
-* `subsURI`: Path of the .srt subs file. e.g. `/home/user/movies/movie.srt`
-* `subsEncoding`: Encoding of the subs file. e.g. `utf-8-sig`, `latin-1`, etc... 
-* `videoURI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
-* `outputURI`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
-* `textColor`: Color for the text that will be displayed e.g. `yellow`, `white`, etc...
-* `textSize`: Font size for the text that will be displayed e.g. `18`
-* `textFont`: Font for the text that will be displayed e.g. `FreeSans-Negrita`
-* `consumerKey`: Your Twitter account consumer key.
-* `consumerSecret`: Your Twitter account consumer secret.
-* `accessTokenKey`: Your Twitter account access token key.
-* `accessTokenSecret`: Your Twitter account access token secret.
+* `CONSUMER_KEY`: Your Twitter account consumer key.
+* `CONSUMER_SECRET`: Your Twitter account consumer secret.
+* `ACCESS_TOKEN_KEY`: Your Twitter account access token key.
+* `ACCESS_TOKEN_SECRET`: Your Twitter account access token secret.
+* `SUBS_URI`: Path of the .srt subs file. e.g. `/home/user/movies/movie.srt`
+* `SUBS_ENCODING`: Encoding of the subs file. e.g. `utf-8-sig`, `latin-1`, etc... 
+* `VIDEO_URI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
+* `OUTPUT_URI`: Path where the GIF file that will be posted is stored. e.g. `/tmp/movie.gif`
+* `TEXT_COLOR`: Color for the text that will be displayed e.g. `yellow`, `white`, etc...
+* `TEXT_SIZE`: Font size for the text that will be displayed e.g. `18`
+* `TEXT_FONT`: Font for the text that will be displayed e.g. `FreeSans-Negrita`
+* `IDLE_PERIOD`: The number of seconds the script will wait before executing. e.g. `900`
 
 ## Usage
 
