@@ -57,4 +57,4 @@ class MovieQuoteTwitterBot:
 if __name__ == "__main__":
     while True:
         MovieQuoteTwitterBot().main()
-    time.sleep(int(os.environ["IDLE_PERIOD"]))
+        time.sleep(int(os.environ["IDLE_PERIOD"]))
