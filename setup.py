@@ -10,5 +10,5 @@ setup(
     long_description=open("README.md").read(),
     packages=["movie_quote_twitter_bot"],
     include_package_data=True,
-    install_requires=["moviepy >= 0.2", "srt >= 1.9", "python-twitter >= 3.5",],
+    install_requires=["moviepy >= 1.0", "srt >= 1.9", "python-twitter >= 3.5",],
 )

@@ -51,7 +51,7 @@ class MovieQuoteTwitterBot:
 
     def create_gif(self, output_uri, video, text):
         compo = CompositeVideoClip([video, text])
-        compo.write_gif(output_uri, verbose=False, progress_bar=False)
+        compo.write_gif(output_uri, verbose=False, logger=None)
 
 
 if __name__ == "__main__":
