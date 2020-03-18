@@ -1,4 +1,4 @@
-# Movie Quote Twitter Bot [![Build Status](https://travis-ci.org/namelivia/movie-quote-twitter-bot.svg?branch=master)](https://travis-ci.org/namelivia/movie-quote-twitter-bot)
+# Movie Quote Twitter Bot [![tag](https://img.shields.io/github/tag/namelivia/movie-quote-twitter-bot.svg)](https://github.com/namelivia/movie-quote-twitter-bot/releases) [![Build Status](https://travis-ci.org/namelivia/movie-quote-twitter-bot.svg?branch=master)](https://travis-ci.org/namelivia/movie-quote-twitter-bot)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/1571416/52222505-f2374700-28a3-11e9-9cd7-7f03e9ca66ff.gif" alt="Example GIF" />
