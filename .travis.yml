@@ -5,15 +5,15 @@ env:
 services:
     - docker
 python:
-  - 2.7
-  - 3.5
   - 3.6
+  - 3.7
 install:
-  - pip install -e .
+  - pip install pipenv
+  - pipenv install --dev
 before_script:
   - docker pull "$IMAGE_NAME" || true
 script:
-  - python -m unittest discover
+  - pipenv run pytest
   - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
