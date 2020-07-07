@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4dad711ed1ec8fcdc6e2cbbde0c4a49dae242169c6bd0d1c9e17cc3eb7cb5460"
+            "sha256": "7c051b9a839008baf4726958d7b9d0f85f27d39e659994f0c3cf74abf9bf429b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -73,10 +73,6 @@
             ],
             "index": "pypi",
             "version": "==1.0.3"
-        },
-        "moviequotetwitterbot": {
-            "editable": true,
-            "path": "."
         },
         "numpy": {
             "hashes": [

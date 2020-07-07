@@ -7,7 +7,6 @@ verify_ssl = true
 pytest = "*"
 
 [packages]
-moviequotetwitterbot = {editable = true,path = "."}
 moviepy = "*"
 srt = "*"
 python-twitter = "*"
