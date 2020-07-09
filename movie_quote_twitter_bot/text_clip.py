@@ -3,17 +3,19 @@ from moviepy.editor import TextClip as _TextClip
 
 class TextClip:
 
-    def __init__(self, config):
-        self.config = config
+    def __init__(self, size, color, font):
+        self.size = size
+        self.color = color
+        self.font = font
 
-    def build(self, sentence, start, end):
+    def generate_quote_text(self, quote):
         return (
             _TextClip(
-                sentence,
-                fontsize=self.config.get("TEXT_SIZE"),
-                color=self.config.get("TEXT_COLOR"),
-                font=self.config.get("TEXT_FONT"),
+                quote.content,
+                fontsize=self.size,
+                color=self.color,
+                font=self.font,
             )
             .set_pos("bottom")
-            .set_duration(str(end - start))
+            .set_duration(str(quote.end - quote.start))
         )
