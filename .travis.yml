@@ -13,7 +13,7 @@ install:
 before_script:
   - docker pull "$IMAGE_NAME" || true
 script:
-  - pipenv run pytest
+  - pipenv run pytest --cov-report=xml --cov=movie_quote_twitter_bot tests/
   - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
