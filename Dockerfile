@@ -9,4 +9,5 @@ RUN apk add --no-cache gcc\
 WORKDIR /app
 COPY . /app
 RUN pip install pipenv
+RUN pipenv install
 CMD ["pipenv", "run", "python", "main.py"]
