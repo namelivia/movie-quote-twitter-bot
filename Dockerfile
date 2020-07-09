@@ -8,5 +8,4 @@ RUN apk add --no-cache gcc\
 	musl-dev
 WORKDIR /app
 COPY . /app
-RUN pip install -e .
-CMD ["python", "movie_quote_twitter_bot/movie_quote_twitter_bot.py"]
+CMD ["pipenv", "run", "python", "main.py"]

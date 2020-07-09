@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+mock = "*"
+pytest-cov = "*"
+
+[packages]
+moviepy = "*"
+srt = "*"
+python-twitter = "*"
+
+[requires]
+python_version = "3.6"
