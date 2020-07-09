@@ -8,4 +8,5 @@ RUN apk add --no-cache gcc\
 	musl-dev
 WORKDIR /app
 COPY . /app
+RUN pip install pipenv
 CMD ["pipenv", "run", "python", "main.py"]
