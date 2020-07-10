@@ -27,13 +27,13 @@ class TestBot(TestCase):
         text_clip_mock = mock.Mock()
         self.subs.get_random.return_value = quote_mock
         self.video_clip.generate_quote_video.return_value = video_clip_mock
-        self.text_clip.build.return_value = text_clip_mock
+        self.text_clip.generate_quote_text.return_value = text_clip_mock
         self.bot.run()
         self.subs.get_random.assert_called_once_with()
         self.video_clip.generate_quote_video.assert_called_once_with(
             quote_mock
         )
-        self.text_clip.build.assert_called_once_with(quote_mock)
+        self.text_clip.generate_quote_text.assert_called_once_with(quote_mock)
         self.gif.generate_composite_gif.assert_called_once_with(
             video_clip_mock,
             text_clip_mock
