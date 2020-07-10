@@ -12,28 +12,28 @@ class Factory():
 
     def build(self):
         subs = Subs(
-            self.config.get("SUBS_URI"),
-            self.config.get("SUBS_ENCODING")
+            self.config.get("subs_uri"),
+            self.config.get("subs_encoding")
         )
         text_clip = TextClip(
-            self.config.get("TEXT_SIZE"),
-            self.config.get("TEXT_COLOR"),
-            self.config.get("TEXT_FONT")
+            self.config.get("text_size"),
+            self.config.get("text_color"),
+            self.config.get("text_font")
         )
-        video_clip = VideoClip(self.config.get("VIDEO_URI"))
+        video_clip = VideoClip(self.config.get("video_uri"))
         twitter = Twitter(
-            self.config.get("CONSUMER_KEY"),
-            self.config.get("CONSUMER_SECRET"),
-            self.config.get("ACCESS_TOKEN_KEY"),
-            self.config.get("ACCESS_TOKEN_SECRET"),
-            self.config.get("OUTPUT_URI")
+            self.config.get("consumer_key"),
+            self.config.get("consumer_secret"),
+            self.config.get("access_token_key"),
+            self.config.get("access_token_secret"),
+            self.config.get("output_uri")
         )
-        gif = Gif(self.config.get("OUTPUT_URI"))
+        gif = Gif(self.config.get("output_uri"))
         return Bot(
             subs,
             text_clip,
             video_clip,
             twitter,
             gif,
-            self.config.get("IDLE_PERIOD")
+            self.config.get("idle_period")
         )
