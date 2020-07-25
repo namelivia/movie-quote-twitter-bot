@@ -10,14 +10,12 @@ class TestBot(TestCase):
         self.video_clip = mock.Mock()
         self.twitter = mock.Mock()
         self.gif = mock.Mock()
-        self.idle_period = 10
         self.bot = Bot(
             self.subs,
             self.text_clip,
             self.video_clip,
             self.twitter,
-            self.gif,
-            self.idle_period
+            self.gif
         )
 
     def test_runnig(self):
@@ -39,8 +37,3 @@ class TestBot(TestCase):
             text_clip_mock
         )
         self.twitter.post_gif.assert_called_once_with(quote_mock.content)
-
-    @mock.patch('movie_quote_twitter_bot.bot.time.sleep')
-    def test_waiting(self, m_sleep):
-        self.bot.wait()
-        m_sleep.assert_called_once_with(self.idle_period)
