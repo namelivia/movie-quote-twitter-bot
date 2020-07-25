@@ -4,7 +4,7 @@ from movie_quote_twitter_bot.bot import Bot
 import mock
 
 
-class TestTwitter(TestCase):
+class TestFactory(TestCase):
 
     @mock.patch('movie_quote_twitter_bot.factory.Subs')
     @mock.patch('movie_quote_twitter_bot.factory.TextClip')
