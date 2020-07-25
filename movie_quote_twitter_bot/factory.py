@@ -34,6 +34,5 @@ class Factory():
             text_clip,
             video_clip,
             twitter,
-            gif,
-            self.config.get("idle_period")
+            gif
         )
