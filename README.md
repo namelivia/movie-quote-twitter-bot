@@ -9,8 +9,8 @@ This is a Python script I made one day after work, it will pick random quotes fr
 
 ## Requeriments
 
-* python3.7
-* pipenv
+* python3.7 [website](https://www.python.org/downloads/release/python-375/)
+* pipenv [website](https://pypi.org/project/pipenv/) 
 
 ## Installation
 
