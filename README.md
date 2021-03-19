@@ -1,4 +1,4 @@
-# Movie Quote Twitter Bot [![tag](https://img.shields.io/github/tag/namelivia/movie-quote-twitter-bot.svg)](https://github.com/namelivia/movie-quote-twitter-bot/releases) [![Build Status](https://travis-ci.org/namelivia/movie-quote-twitter-bot.svg?branch=master)](https://travis-ci.org/namelivia/movie-quote-twitter-bot) [![codecov](https://codecov.io/gh/namelivia/movie-quote-twitter-bot/branch/master/graph/badge.svg)](https://codecov.io/gh/namelivia/movie-quote-twitter-bot)
+# Movie Quote Twitter Bot [![tag](https://img.shields.io/github/tag/namelivia/movie-quote-twitter-bot.svg)](https://github.com/namelivia/movie-quote-twitter-bot/releases) [![Build Status](https://github.com/namelivia/movie-quote-twitter-bot/actions/workflows/build.yml/badge.svg)](https://github.com/namelivia/movie-quote-twitter-bot/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/namelivia/movie-quote-twitter-bot/branch/master/graph/badge.svg)](https://codecov.io/gh/namelivia/movie-quote-twitter-bot)
 
 
 <p align="center">
