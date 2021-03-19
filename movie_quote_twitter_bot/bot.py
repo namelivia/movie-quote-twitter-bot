@@ -1,13 +1,5 @@
 class Bot:
-
-    def __init__(
-        self,
-        subs,
-        text_clip,
-        video_clip,
-        twitter,
-        gif
-    ):
+    def __init__(self, subs, text_clip, video_clip, twitter, gif):
         self.subs = subs
         self.text_clip = text_clip
         self.video_clip = video_clip

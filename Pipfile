@@ -8,6 +8,8 @@ pytest = "*"
 mock = "*"
 pytest-cov = "*"
 codecov = "*"
+black = "*"
+pre-commit = "*"
 
 [packages]
 moviepy = "*"
@@ -16,3 +18,6 @@ python-twitter = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

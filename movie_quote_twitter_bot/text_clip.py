@@ -2,7 +2,6 @@ from moviepy.editor import TextClip as _TextClip
 
 
 class TextClip:
-
     def __init__(self, size, color, font):
         self.size = size
         self.color = color

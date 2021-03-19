@@ -3,7 +3,6 @@ import random
 
 
 class Subs:
-
     def __init__(self, filepath, encoding):
         subs_file = open(
             filepath,
