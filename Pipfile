@@ -15,6 +15,7 @@ pre-commit = "*"
 moviepy = "*"
 srt = "*"
 python-twitter = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.7"
