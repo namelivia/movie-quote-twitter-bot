@@ -16,11 +16,11 @@ class TestTextClip(TestCase):
         quote.end = 23
         text_clip_mock = mock.Mock()
         m_text_clip.return_value = text_clip_mock
-        text_clip_mock.set_pos.return_value = text_clip_mock
+        text_clip_mock.set_positionn.return_value = text_clip_mock
         text_clip_mock.set_duration.return_value = text_clip_mock
         text_clip.generate_quote_text(quote)
         m_text_clip.assert_called_once_with(
             quote.content, fontsize=size, color=color, font=font
         )
-        text_clip_mock.set_pos.assert_called_once_with("bottom")
+        text_clip_mock.set_position.assert_called_once_with(("center", "bottom"))
         text_clip_mock.set_duration.assert_called_once_with("11")
