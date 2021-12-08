@@ -23,4 +23,4 @@ class TestTextClip(TestCase):
             quote.content, fontsize=size, color=color, font=font
         )
         text_clip_mock.set_position.assert_called_once_with(("center", "bottom"))
-        text_clip_mock.set_duration.assert_called_once_with("11")
+        text_clip_mock.set_duration.assert_called_once_with(11)

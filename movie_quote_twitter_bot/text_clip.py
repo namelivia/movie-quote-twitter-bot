@@ -16,5 +16,5 @@ class TextClip:
                 font=self.font,
             )
             .set_position(("center", "bottom"))
-            .set_duration(str(quote.end - quote.start))
+            .set_duration(quote.end - quote.start)
         )
