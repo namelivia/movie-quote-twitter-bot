@@ -16,7 +16,7 @@ class TestTextClip(TestCase):
         quote.end = 23
         text_clip_mock = mock.Mock()
         m_text_clip.return_value = text_clip_mock
-        text_clip_mock.set_positionn.return_value = text_clip_mock
+        text_clip_mock.set_position.return_value = text_clip_mock
         text_clip_mock.set_duration.return_value = text_clip_mock
         text_clip.generate_quote_text(quote)
         m_text_clip.assert_called_once_with(
