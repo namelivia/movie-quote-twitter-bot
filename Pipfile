@@ -12,8 +12,8 @@ black = "*"
 pre-commit = "*"
 
 [packages]
-moviepy = "*"
-srt = "*"
+moviepy = "==1.0.3"
+srt = "==3.3.0"
 python-twitter = "*"
 sentry-sdk = "*"
 
