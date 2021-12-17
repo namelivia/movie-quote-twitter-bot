@@ -13,7 +13,7 @@ pre-commit = "*"
 
 [packages]
 moviepy = "==1.0.3"
-srt = "==3.3.0"
+srt = "==3.5.0"
 python-twitter = "*"
 sentry-sdk = "*"
 
