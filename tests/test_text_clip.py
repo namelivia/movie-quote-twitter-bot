@@ -1,6 +1,7 @@
 from unittest import TestCase
 from movie_quote_twitter_bot.text_clip import TextClip
 import mock
+from datetime import datetime, timedelta
 
 
 class TestTextClip(TestCase):
@@ -12,8 +13,8 @@ class TestTextClip(TestCase):
         text_clip = TextClip(size, color, font)
         quote = mock.Mock()
         quote.content = "some quote"
-        quote.start = 12
-        quote.end = 23
+        quote.start = datetime.now()
+        quote.end = quote.start + timedelta(0, 11)
         text_clip_mock = mock.Mock()
         m_text_clip.return_value = text_clip_mock
         text_clip_mock.set_position.return_value = text_clip_mock
