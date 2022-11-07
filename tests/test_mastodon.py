@@ -24,10 +24,7 @@ class TestMastodon(TestCase):
             client_id=client_id,
             api_base_url=api_base_url,
         )
-        mastodon_api_mock.login.assert_called_once_with(
-            login,
-            password
-        )
+        mastodon_api_mock.login.assert_called_once_with(login, password)
         text = "text"
         # m_api_factory.return_value = {"media": "dict"}
         self.assertIsNone(mastodon.post_gif(text))

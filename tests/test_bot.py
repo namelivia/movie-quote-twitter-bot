@@ -12,7 +12,12 @@ class TestBot(TestCase):
         self.mastodon = mock.Mock()
         self.gif = mock.Mock()
         self.bot = Bot(
-            self.subs, self.text_clip, self.video_clip, self.twitter, self.mastodon, self.gif
+            self.subs,
+            self.text_clip,
+            self.video_clip,
+            self.twitter,
+            self.mastodon,
+            self.gif,
         )
 
     def test_runnig(self):

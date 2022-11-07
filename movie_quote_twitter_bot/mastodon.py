@@ -10,14 +10,8 @@ class MastodonAPI:
         password,
         output_uri,
     ):
-        self.mastodon = Mastodon(
-            client_id=client_id,
-            api_base_url=api_base_url
-        )
-        self.mastodon.log_in(
-            login,
-            password
-        )
+        self.mastodon = Mastodon(client_id=client_id, api_base_url=api_base_url)
+        self.mastodon.log_in(login, password)
         self.output_uri = output_uri
 
     def post_gif(self, text):
