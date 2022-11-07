@@ -5,7 +5,8 @@
   <img src="https://user-images.githubusercontent.com/1571416/52222505-f2374700-28a3-11e9-9cd7-7f03e9ca66ff.gif" alt="Example GIF" />
 </p>
 
-This is a Python script I made one day after work, it will pick random quotes from a provided movie and post them to Twitter as animated GIFs.
+This is a Python script I made one day after work, it will pick random quotes from a provided movie and post them to Twitter
+and Mastodon as animated GIFs.
 
 ## Requeriments
 
@@ -20,10 +21,15 @@ Clone the project, navigate to its root folder and execute `pipenv install` for 
 
 To execute the script the following environment variables must be set.
 
-* `CONSUMER_KEY`: Your Twitter account consumer key.
-* `CONSUMER_SECRET`: Your Twitter account consumer secret.
-* `ACCESS_TOKEN_KEY`: Your Twitter account access token key.
-* `ACCESS_TOKEN_SECRET`: Your Twitter account access token secret.
+* `TWITTER_CONSUMER_KEY`: Your Twitter account consumer key.
+* `TWITTER_CONSUMER_SECRET`: Your Twitter account consumer secret.
+* `TWITTER_ACCESS_TOKEN_KEY`: Your Twitter account access token key.
+* `TWITTER_ACCESS_TOKEN_SECRET`: Your Twitter account access token secret.
+* `MASTODON_CLIENT_ID`: Client id for your Mastodon instance.
+* `MASTODON_CLIENT_SECRET`: Client secret for your Mastodon instance.
+* `MASTODON_API_BASE_URL`: Base url for your Mastodon instance.
+* `MASTODON_LOGIN`: Login (username) for the account that will post in Mastodon.
+* `MASTODON_PASSWORD`: Password for the account that will post in Mastodon.
 * `SUBS_URI`: Path of the .srt subs file. e.g. `/home/user/movies/movie.srt`
 * `SUBS_ENCODING`: Encoding of the subs file. e.g. `utf-8-sig`, `latin-1`, etc... 
 * `VIDEO_URI`: Path of the actual movie file. e.g. `/home/users/movies/movie.mkv`
@@ -36,7 +42,7 @@ To execute the script the following environment variables must be set.
 
 ## Usage
 
-Just execute `pipenv run python main.py` and if everything is properly configured, a random movie quote will be posted to your Twitter account.
+Just execute `pipenv run python main.py` and if everything is properly configured, a random movie quote will be posted to your Twitter and Mastodon accounts.
 
 ## Testing
 
