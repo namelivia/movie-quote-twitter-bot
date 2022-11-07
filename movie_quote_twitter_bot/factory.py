@@ -28,6 +28,7 @@ class Factory:
         )
         mastodon = Mastodon(
             self.config.get("mastodon_client_id"),
+            self.config.get("mastodon_client_secret"),
             self.config.get("mastodon_api_base_url"),
             self.config.get("mastodon_login"),
             self.config.get("mastodon_password"),

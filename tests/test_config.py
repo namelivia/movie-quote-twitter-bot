@@ -15,6 +15,7 @@ class TestConfig(TestCase):
             "TWITTER_ACCESS_TOKEN_KEY": "twitteraccesstokenkey",
             "TWITTER_ACCESS_TOKEN_SECRET": "twitteraccesstokensecret",
             "MASTODON_CLIENT_ID": "mastodonclientid",
+            "MASTODON_CLIENT_SECRET": "mastodonclientsecret",
             "MASTODON_API_BASE_URL": "mastodonapibaseurl",
             "MASTODON_LOGIN": "mastodonlogin",
             "MASTODON_PASSWORD": "mastodonpassword",

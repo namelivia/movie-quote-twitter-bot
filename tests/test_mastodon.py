@@ -26,13 +26,11 @@ class TestMastodon(TestCase):
         )
         mastodon_api_mock.login.assert_called_once_with(login, password)
         text = "text"
-        # m_api_factory.return_value = {"media": "dict"}
+        mastodon_api_mock.media_post.return_value = {"media": "dict"}
         self.assertIsNone(mastodon.post_gif(text))
-        # mastodon_api_mock.media_post.assert_called_once_with(
-        #    output_uri,
-        #    mime_type="image/gif"
-        # )
+        mastodon_api_mock.media_post.assert_called_once_with(
+            output_uri, mime_type="image/gif"
+        )
         mastodon_api_mock.status_post.assert_called_once_with(
-            text,
-            # media={"media": "dict"}
+            text, media={"media": "dict"}
         )

@@ -11,6 +11,7 @@ class Config:
             "twitter_access_token_key": source["TWITTER_ACCESS_TOKEN_KEY"],
             "twitter_access_token_secret": source["TWITTER_ACCESS_TOKEN_SECRET"],
             "mastodon_client_id": source["MASTODON_CLIENT_ID"],
+            "mastodon_client_secret": source["MASTODON_CLIENT_SECRET"],
             "mastodon_api_base_url": source["MASTODON_API_BASE_URL"],
             "mastodon_login": source["MASTODON_LOGIN"],
             "mastodon_password": source["MASTODON_PASSWORD"],

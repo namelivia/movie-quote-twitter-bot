@@ -10,6 +10,7 @@ pytest-cov = "*"
 codecov = "*"
 black = "*"
 pre-commit = "*"
+pudb = "*"
 
 [packages]
 moviepy = "==1.0.3"
