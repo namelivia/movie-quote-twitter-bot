@@ -3,7 +3,7 @@ from .subs import Subs
 from .text_clip import TextClip
 from .video_clip import VideoClip
 from .twitter import Twitter
-from .mastodon import Mastodon
+from .mastodon import MastodonAPI
 from .gif import Gif
 
 
@@ -26,7 +26,7 @@ class Factory:
             self.config.get("twitter_access_token_secret"),
             self.config.get("output_uri"),
         )
-        mastodon = Mastodon(
+        mastodon = MastodonAPI(
             self.config.get("mastodon_client_id"),
             self.config.get("mastodon_client_secret"),
             self.config.get("mastodon_api_base_url"),

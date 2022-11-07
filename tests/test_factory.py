@@ -9,7 +9,7 @@ class TestFactory(TestCase):
     @mock.patch("movie_quote_twitter_bot.factory.TextClip")
     @mock.patch("movie_quote_twitter_bot.factory.VideoClip")
     @mock.patch("movie_quote_twitter_bot.factory.Twitter")
-    @mock.patch("movie_quote_twitter_bot.factory.Mastodon")
+    @mock.patch("movie_quote_twitter_bot.factory.MastodonAPI")
     @mock.patch("movie_quote_twitter_bot.factory.Gif")
     def test_building_bot(
         self, m_gif, m_mastodon, m_twitter, m_video_clip, m_text_clip, m_subs
