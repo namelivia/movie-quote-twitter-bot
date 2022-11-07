@@ -3,6 +3,7 @@ from .subs import Subs
 from .text_clip import TextClip
 from .video_clip import VideoClip
 from .twitter import Twitter
+from .mastodon import Mastodon
 from .gif import Gif
 
 
@@ -19,11 +20,19 @@ class Factory:
         )
         video_clip = VideoClip(self.config.get("video_uri"))
         twitter = Twitter(
-            self.config.get("consumer_key"),
-            self.config.get("consumer_secret"),
-            self.config.get("access_token_key"),
-            self.config.get("access_token_secret"),
+            self.config.get("twitter_consumer_key"),
+            self.config.get("twitter_consumer_secret"),
+            self.config.get("twitter_access_token_key"),
+            self.config.get("twitter_access_token_secret"),
+            self.config.get("output_uri"),
+        )
+        mastodon = Mastodon(
+            self.config.get("mastodon_client_id"),
+            self.config.get("mastodon_client_secret"),
+            self.config.get("mastodon_api_base_url"),
+            self.config.get("mastodon_login"),
+            self.config.get("mastodon_password"),
             self.config.get("output_uri"),
         )
         gif = Gif(self.config.get("output_uri"))
-        return Bot(subs, text_clip, video_clip, twitter, gif)
+        return Bot(subs, text_clip, video_clip, twitter, mastodon, gif)

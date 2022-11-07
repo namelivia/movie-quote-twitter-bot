@@ -9,9 +9,15 @@ class TestBot(TestCase):
         self.text_clip = mock.Mock()
         self.video_clip = mock.Mock()
         self.twitter = mock.Mock()
+        self.mastodon = mock.Mock()
         self.gif = mock.Mock()
         self.bot = Bot(
-            self.subs, self.text_clip, self.video_clip, self.twitter, self.gif
+            self.subs,
+            self.text_clip,
+            self.video_clip,
+            self.twitter,
+            self.mastodon,
+            self.gif,
         )
 
     def test_runnig(self):
@@ -30,3 +36,4 @@ class TestBot(TestCase):
             video_clip_mock, text_clip_mock
         )
         self.twitter.post_gif.assert_called_once_with(quote_mock.content)
+        self.mastodon.post_gif.assert_called_once_with(quote_mock.content)
