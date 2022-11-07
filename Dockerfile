@@ -8,7 +8,7 @@ RUN apk add --no-cache gcc\
 	musl-dev
 WORKDIR /app
 COPY . /app
-RUN pip install -I pipenv==2022.10.25
+RUN pip install -I pipenv==2018.11.26
 
 FROM builder AS development
 RUN pipenv install --dev
