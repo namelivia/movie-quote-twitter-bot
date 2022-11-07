@@ -12,13 +12,13 @@ black = "*"
 pre-commit = "*"
 
 [packages]
-moviepy = "*"
-srt = "*"
+moviepy = "==1.0.3"
+srt = "==3.5.2"
 python-twitter = "*"
 sentry-sdk = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
