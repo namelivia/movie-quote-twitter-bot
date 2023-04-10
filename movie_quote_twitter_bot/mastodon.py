@@ -21,6 +21,8 @@ class MastodonAPI:
 
     def post_gif(self, text):
         if self.enabled:
-            media_dict = self.mastodon.media_post(self.output_uri, mime_type="image/gif")
+            media_dict = self.mastodon.media_post(
+                self.output_uri, mime_type="image/gif"
+            )
             self.mastodon.status_post(text, media_ids=media_dict)
         return None
