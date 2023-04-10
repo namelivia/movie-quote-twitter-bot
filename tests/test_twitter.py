@@ -14,6 +14,7 @@ class TestTwitter(TestCase):
         access_token_secret = "access_token_secret"
         output_uri = "/tmp/output"
         twitter = Twitter(
+            True,
             consumer_key,
             consumer_secret,
             access_token_key,

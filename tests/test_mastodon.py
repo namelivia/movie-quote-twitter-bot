@@ -15,6 +15,7 @@ class TestMastodon(TestCase):
         password = "password"
         output_uri = "/tmp/output"
         mastodon = MastodonAPI(
+            True,
             client_id,
             client_secret,
             api_base_url,

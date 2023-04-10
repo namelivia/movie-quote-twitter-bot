@@ -29,8 +29,10 @@ class TestFactory(TestCase):
             "config_value",
             "config_value",
             "config_value",
+            "config_value",
         )
         m_mastodon.assert_called_once_with(
+            "config_value",
             "config_value",
             "config_value",
             "config_value",
