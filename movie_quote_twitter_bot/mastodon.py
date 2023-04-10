@@ -4,6 +4,7 @@ from mastodon import Mastodon
 class MastodonAPI:
     def __init__(
         self,
+        enabled,
         client_id,
         client_secret,
         api_base_url,
@@ -16,8 +17,10 @@ class MastodonAPI:
         )
         self.mastodon.log_in(login, password)
         self.output_uri = output_uri
+        self.enabled = enabled
 
     def post_gif(self, text):
-        media_dict = self.mastodon.media_post(self.output_uri, mime_type="image/gif")
-        self.mastodon.status_post(text, media_ids=media_dict)
+        if self.enabled:
+            media_dict = self.mastodon.media_post(self.output_uri, mime_type="image/gif")
+            self.mastodon.status_post(text, media_ids=media_dict)
         return None

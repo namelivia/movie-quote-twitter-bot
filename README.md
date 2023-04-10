@@ -21,10 +21,12 @@ Clone the project, navigate to its root folder and execute `pipenv install` for 
 
 To execute the script the following environment variables must be set.
 
+* `TWITTER_ENABLED`: If set to true posting to Twitter will be enabled.
 * `TWITTER_CONSUMER_KEY`: Your Twitter account consumer key.
 * `TWITTER_CONSUMER_SECRET`: Your Twitter account consumer secret.
 * `TWITTER_ACCESS_TOKEN_KEY`: Your Twitter account access token key.
 * `TWITTER_ACCESS_TOKEN_SECRET`: Your Twitter account access token secret.
+* `MASTODON_ENABLED`: If set to true posting to Mastodon will be enabled.
 * `MASTODON_CLIENT_ID`: Client id for your Mastodon instance.
 * `MASTODON_CLIENT_SECRET`: Client secret for your Mastodon instance.
 * `MASTODON_API_BASE_URL`: Base url for your Mastodon instance.
