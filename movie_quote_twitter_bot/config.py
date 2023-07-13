@@ -1,5 +1,4 @@
 class Config:
-
     def _is_true(self, value):
         return value.lower() == "true"
 
