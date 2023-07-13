@@ -1,4 +1,8 @@
 class Config:
+
+    def _is_true(self, value):
+        return value.lower() == "true"
+
     def __init__(self, source):
         self.config = {
             "idle_period": int(source["IDLE_PERIOD"]),
@@ -6,12 +10,12 @@ class Config:
             "subs_encoding": source["SUBS_ENCODING"],
             "video_uri": source["VIDEO_URI"],
             "output_uri": source["OUTPUT_URI"],
-            "twitter_enabled": source["TWITTER_ENABLED"],
+            "twitter_enabled": self._is_true(source["TWITTER_ENABLED"]),
             "twitter_consumer_key": source["TWITTER_CONSUMER_KEY"],
             "twitter_consumer_secret": source["TWITTER_CONSUMER_SECRET"],
             "twitter_access_token_key": source["TWITTER_ACCESS_TOKEN_KEY"],
             "twitter_access_token_secret": source["TWITTER_ACCESS_TOKEN_SECRET"],
-            "mastodon_enabled": source["MASTODON_ENABLED"],
+            "mastodon_enabled": self._is_true(source["MASTODON_ENABLED"]),
             "mastodon_client_id": source["MASTODON_CLIENT_ID"],
             "mastodon_client_secret": source["MASTODON_CLIENT_SECRET"],
             "mastodon_api_base_url": source["MASTODON_API_BASE_URL"],

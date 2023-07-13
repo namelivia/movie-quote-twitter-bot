@@ -10,7 +10,7 @@ class TestConfig(TestCase):
             "SUBS_ENCODING": "utf-8",
             "VIDEO_URI": "/tmp/video",
             "OUTPUT_URI": "/tmp/output",
-            "TWITTER_ENABLED": "True",
+            "TWITTER_ENABLED": "false",
             "TWITTER_CONSUMER_KEY": "twitterconsumerkey",
             "TWITTER_CONSUMER_SECRET": "twitterconsumersecret",
             "TWITTER_ACCESS_TOKEN_KEY": "twitteraccesstokenkey",
@@ -29,3 +29,5 @@ class TestConfig(TestCase):
         self.assertEqual("/tmp/subs", config.get("subs_uri"))
         self.assertEqual(3, config.get("idle_period"))
         self.assertEqual(20, config.get("text_size"))
+        self.assertEqual(False, config.get("twitter_enabled"))
+        self.assertEqual(True, config.get("mastodon_enabled"))
